@@ -3,7 +3,7 @@ name: "Dockerfile-Linting"
 on:
   pull_request:
     branches: 
-      - master
+    - master
     paths:
     - ./services/distribution/Dockerfile
     - ./services/submission/Dockerfile
@@ -17,7 +17,7 @@ jobs:
     - name: Pull HaDoLint image
       run: docker pull hadolint/hadolint
     - name: Lint Dockerfile
-      run: docker run --rm -i hadolint/hadolint < ./services/distribution/Dockerfile
+      run: docker run --rm --interactive hadolint/hadolint < ./services/distribution/Dockerfile
   submission:
     runs-on: ubuntu-latest
     steps:
@@ -26,5 +26,5 @@ jobs:
     - name: Pull HaDoLint image
       run: docker pull hadolint/hadolint
     - name: Lint Dockerfile
-      run: docker run --rm -i hadolint/hadolint < ./services/submission/Dockerfile
+      run: docker run --rm --interactive hadolint/hadolint < ./services/submission/Dockerfile
 
