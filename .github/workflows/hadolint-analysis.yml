@@ -3,17 +3,21 @@ name: "Dockerfile-Linting"
 on:
   pull_request:
     branches: 
-    - master
+      - master
 
 jobs:
   distribution:
-    name: hadolint on pr
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
     - name: Lint Dockerfile
-      uses: burdzwastaken/hadolint-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        HADOLINT_ACTION_DOCKERFILE_FOLDER: ./services/distribution
+      run: docker run --rm -i hadolint/hadolint < ./services/distribution/Dockerfile
+  submission:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Lint Dockerfile
+      run: docker run --rm -i hadolint/hadolint < ./services/submission/Dockerfile
+
