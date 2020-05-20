@@ -14,6 +14,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+    - name: Pull HaDoLint image
+      run: docker pull hadolint/hadolint
     - name: Lint Dockerfile
       run: docker run --rm -i hadolint/hadolint < ./services/distribution/Dockerfile
   submission:
@@ -21,6 +23,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+    - name: Pull HaDoLint image
+      run: docker pull hadolint/hadolint
     - name: Lint Dockerfile
       run: docker run --rm -i hadolint/hadolint < ./services/submission/Dockerfile
 
