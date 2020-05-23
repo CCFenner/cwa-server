@@ -1,5 +1,5 @@
 <h1 align="center">
-    Corona-Warn-App Server
+    Dummy Change
 </h1>
 
 <p align="center">
