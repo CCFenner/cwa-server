@@ -12,7 +12,8 @@ on:
 jobs:
   sonar:
     runs-on: ubuntu-latest
-    if: ${{ github.repository_owner == 'CCFenner' && secrets.SONAR_TOKEN != '' }}
+    if: ${{ github.actor == 'repo-owner' }}
+    #if: ${{ github.repository_owner == 'CCFenner' && secrets.SONAR_TOKEN != '' }}
 
     name: 'github actions: sonar'
     steps:
