@@ -12,7 +12,7 @@ on:
 jobs:
   sonar:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'repo-owner' }}
+    if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
     #if: ${{ github.repository_owner == 'CCFenner' && secrets.SONAR_TOKEN != '' }}
 
     name: 'github actions: sonar'
