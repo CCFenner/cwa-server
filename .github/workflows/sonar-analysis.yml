@@ -12,7 +12,7 @@ on:
 jobs:
   sonar:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'CCFenner/cwa-server' }}
+    if: ${{ github.repository_owner == 'CCFenner' && secrets.SONAR_TOKEN != '' }}
 
     name: 'github actions: sonar'
     steps:
