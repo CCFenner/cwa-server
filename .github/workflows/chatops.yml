@@ -34,5 +34,5 @@ jobs:
           CHATOPS_TOKEN: ${{ secrets.CHATOPS_TOKEN }}
           CHATOPS_USER: ${{ secrets.CHATOPS_USER }}
       # Only push to SonarCloud branch if PR is created from a fork
-      - if: ${{ $steps.repository.outputs.slug != $github.repository }}
+      - if: ${{ steps.repository.outputs.slug != github.repository }}
         run: git push -f upstream HEAD:chatops-sonar-${{steps.pullrequest.outputs.number}}
