@@ -53,6 +53,15 @@
           <processEndTag>---license-end</processEndTag>
           <sectionDelimiter>---</sectionDelimiter>
           <addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
+          <licenseMerges>
+            <licenseMerge>Apache License, Version 2.0|The Apache Software License, Version 2.0|The Apache License, Version 2.0</licenseMerge>
+          </licenseMerges>
+          <includeTransitiveDependencies>false</includeTransitiveDependencies>
+          <fileTemplate>${basedir}/.mvn/template/license.ftl</fileTemplate>
+          <outputDirectory>${basedir}</outputDirectory>
+          <license.sortArtifactByName>true</license.sortArtifactByName>
+          <excludedGroups>^org.opencwa</excludedGroups>
+          <thirdPartyFilename>THIRD-PARTY-NOTICES</thirdPartyFilename>
         </configuration>
       </plugin>
       <plugin>
