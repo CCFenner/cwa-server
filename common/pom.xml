@@ -12,6 +12,7 @@
 
   <properties>
     <sonar.projectKey>corona-warn-app_cwa-server_common</sonar.projectKey>
+    <license.skipUpdateProjectLicense>true</license.skipUpdateProjectLicense>
   </properties>
 
   <modelVersion>4.0.0</modelVersion>

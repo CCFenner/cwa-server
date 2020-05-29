@@ -33,6 +33,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <sonar.projectKey>corona-warn-app_cwa-server_services</sonar.projectKey>
+    <license.skipUpdateProjectLicense>true</license.skipUpdateProjectLicense>
   </properties>
 
   <dependencies>
