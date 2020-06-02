@@ -2,7 +2,7 @@
  * ---license-start
  * Corona-Warn-App
  * ---
- * Copyright (C) 2020 SAP SE and all other contributors
+ * Copyright (C) 2020 Christopher
  * ---
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
